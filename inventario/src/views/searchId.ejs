@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar productos</title>
+    <%- include ('partials/head') -%>
+</head>
+<body>
+    <%- include ('partials/nav') -%>
+    <div id="app" class="py-4">
+        <div class="row justify-content-center">
+            <div class="card">
+                <div class="col-12 card-header">
+                    <h4 class="text-center">Buscar productos:</h4>
+                </div>
+                <form id="product-form" class="col-12 card-body">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label for="select">Seleccione una opción de Busqueda</label>
+                            <select class="form-control" id="selectBusqueda">
+                                <option value="*">Busqueda</option>
+                                <option value="1">Por Número</option>
+                                <option value="2">Por Rangos</option>
+                            </select>
+                        </div>
+                    <div id="campos">
+    
+                    </div>
+                    </div>
+                    <div class="container text-center">
+                            <input id="Buscar" type="submit" value="Buscar" class="btn btn-primary">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="tabla">
+            
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <%- include ('partials/footer') -%>
+    <!-- JAVASCRIPT CDNS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="js/search/searchId.js"></script>
+</body>
+</html>

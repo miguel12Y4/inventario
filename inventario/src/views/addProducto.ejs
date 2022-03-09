@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario Insuco</title>
+    <%- include ('partials/head') -%>
+</head>
+
+<body>
+    <%- include ('partials/nav') -%>
+    
+        <div id="App" class="row justify-content-center py-4">
+            <div class="col-md-3" id ="div-formulario">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Añadir producto</h4>
+                    </div>
+                    <form id="product-form" class="card-body">
+                        <div class="form-group">
+                            <label>Descripcion:</label>
+                            <input type="text" id="descripcion" placeholder="Descripción" class="form-control" autocomplete="off" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label>Cantidad:</label>
+                            <input type="number" id="cantidad" placeholder="Cantidad (sin puntos)" class="form-control" min="1" step="1" max="5000" autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <label>Precio:</label>
+                            <input type="number" id="precio" placeholder="Precio (sin puntos)" class="form-control" autocomplete="off" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label>Observación:</label>
+                            <input type="text" id="observacion" placeholder="Observación" class="form-control" autocomplete="off">
+                        </div>
+
+                        <!-- Selects para el formulario-->
+                        
+                        <div class="form-group">
+
+
+                            <select class="form-control" id="selectEspecie">
+                                <option value="*">Especie</option>
+                            </select>
+                            
+                            <!-- <input type="text" name="nameEspecie" list="listEspecie">
+                            <datalist id="listEspecie">
+                                <option valor="*">Seleccione</option>
+                            </datalist> -->
+
+
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control" id="selectRubro">
+                                    <option value="*">Rubro</option>
+                                </select>
+
+                                <!-- <input type="text" name="nameRubro" list="listRubro">
+                                <datalist id="listRubro">
+                                    <option valor="*">Seleccione</option>
+                                </datalist> -->
+                                
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control" id="selectUbicacion">
+                                    <option value="*">Ubicación</option>
+                                </select>
+
+                                <!-- <input type="text" name="nameRubro" list="listRubro">
+                                <datalist id="listRubro">
+                                    <option valor="*">Seleccione</option>
+                                </datalist> -->
+
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control" id="selectPersona">
+                                    <option value="*">Persona</option>
+                                </select>
+
+                                <!-- <input type="text" name="namePersona" list="listPersona">
+                                <datalist id="listPersona">
+                                    <option valor="*">Seleccione</option>
+                                </datalist> -->
+
+                            </div>
+                            
+                            <div class="container text-center">
+                                <input type="submit" value="Agregar" class="btn btn-primary">
+                            </div>
+                        </form>
+                    </div>
+
+                    
+            </div>
+            <div class="col-md-8" id= "div-tabla">
+                <div class="container">
+                    <table id="table" class="table table-responsive text-center table-bordered table-hover">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th scope="col">Descripción</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Especie</th>
+                            <th scope="col">Rubro</th>
+                            <th scope="col">Ubicacion</th>
+                            <th scope="col">Encargado</th>
+                            <th scope="col">Observación</th>
+                            <th scope="col">Borrar</th>
+                          </tr>
+                        </thead>
+                        <tbody id="tbody">
+    
+                        </tbody>
+                      </table>
+                      <div class="container text-center" id="div-enviar">
+                          <button id="enviar" class="btn btn-success">Enviar</button>
+    
+                      </div>
+
+                </div>
+            </div>
+                
+        </div>
+
+
+
+    <!-- FOOTER -->
+    <%- include ('partials/footer') -%>
+    <!-- JAVASCRIPT CDNS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="js/productos.js"></script>
+</body>
+
+</html>
